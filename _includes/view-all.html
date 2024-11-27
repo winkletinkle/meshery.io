@@ -21,45 +21,45 @@
 
 <script type="module">
 
-  const prevButton = document.querySelector(".prev");
-  const nextButton = document.querySelector(".next");
-  const cards = document.querySelectorAll(".patternCard");
-  let count = 0;
-  const maxCount = cards.length;
+  // const prevButton = document.querySelector(".prev");
+  // const nextButton = document.querySelector(".next");
+  // const cards = document.querySelectorAll(".patternCard");
+  // let count = 0;
+  // const maxCount = cards.length;
 
 
-  document.addEventListener("DOMContentLoaded", () => {
+  // document.addEventListener("DOMContentLoaded", () => {
 
-    prevButton.style.display = "none";
-  });
+  //   prevButton.style.display = "none";
+  // });
 
-  function showCards(coun) {
-    cards.forEach((card) => {
-      card.style.display = "none";
-    });
-    for (let i = coun; i < coun + 9 && coun + 9 <= maxCount; i++) {
-      cards[i].style.display = "block";
-    }
+  // function showCards(coun) {
+  //   cards.forEach((card) => {
+  //     card.style.display = "none";
+  //   });
+  //   for (let i = coun; i < coun + 9 && coun + 9 <= maxCount; i++) {
+  //     cards[i].style.display = "block";
+  //   }
 
-  }
+  // }
 
-  function updateButtonVisibility() {
-      prevButton.style.display = count <= 0 ? "none" : "block";
-      nextButton.style.display = count + 9 >= maxCount ? "none" : "block";
-    }
-  prevButton.addEventListener("click", () => {
+  // function updateButtonVisibility() {
+  //     prevButton.style.display = count <= 0 ? "none" : "block";
+  //     nextButton.style.display = count + 9 >= maxCount ? "none" : "block";
+  //   }
+  // prevButton.addEventListener("click", () => {
 
-    if (count > 0) {
-      showCards((count -= 9));
-    }
-    updateButtonVisibility();
-  });
+  //   if (count > 0) {
+  //     showCards((count -= 9));
+  //   }
+  //   updateButtonVisibility();
+  // });
 
-  nextButton.addEventListener("click", () => {
+  // nextButton.addEventListener("click", () => {
 
-    if (count + 9 < maxCount) {
-      showCards((count += 9));
-    }
-    updateButtonVisibility();
-  });
+  //   if (count + 9 < maxCount) {
+  //     showCards((count += 9));
+  //   }
+  //   updateButtonVisibility();
+  // });
 </script>
